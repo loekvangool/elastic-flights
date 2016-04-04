@@ -1,0 +1,283 @@
+{
+    "template": "flights-dev-*",
+    "settings" : {
+		"number_of_shards" : 1,
+		"number_of_replicas": 0,
+		"index.refresh_interval" : "10s"
+    },
+    "mappings": {
+      "_default_": {
+        "dynamic_templates": [
+          {
+            "string_fields": {
+              "mapping": {
+                "index": "not_analyzed",
+                "omit_norms": true,
+                "type": "string",
+                "doc_values": true
+              },
+              "match_mapping_type": "string",
+              "match": "*"
+            }
+          },
+          {
+            "float_fields": {
+              "mapping": {
+                "type": "float",
+                "doc_values": true
+              },
+              "match_mapping_type": "float",
+              "match": "*"
+             }
+           }
+        ],
+        "_all": {
+           "enabled": false
+        },
+        "properties": {
+          "@timestamp": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis",
+            "locale": "en"
+          },
+          "@version": {
+            "type": "string",
+			"index": "not_analyzed"
+          },
+          "ActualElapsedTime": {
+            "type": "float"
+          },
+          "AirTime": {
+            "type": "float"
+          },
+          "AirlineID": {
+            "type": "float"
+          },
+          "ArrDel15": {
+            "type": "float"
+          },
+          "ArrDelay": {
+            "type": "float"
+          },
+          "ArrDelayMinutes": {
+            "type": "float"
+          },
+          "ArrTime": {
+            "type": "float"
+          },
+          "ArrTimeBlk": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "ArrivalDelayGroups": {
+            "type": "float"
+          },
+          "CRSArrTime": {
+            "type": "float"
+          },
+          "CRSDepTime": {
+            "type": "float"
+          },
+          "CRSElapsedTime": {
+            "type": "float"
+          },
+          "CancellationCode": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Cancelled": {
+            "type": "float"
+          },
+          "Carrier": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "CarrierDelay": {
+            "type": "float"
+          },
+          "CompensatedDelayMinutes": {
+            "type": "float"
+          },
+          "DayOfWeek": {
+            "type": "float"
+          },
+          "DayofMonth": {
+            "type": "float"
+          },
+          "DepDel15": {
+            "type": "float"
+          },
+          "DepDelay": {
+            "type": "float"
+          },
+          "DepDelayMinutes": {
+            "type": "float"
+          },
+          "DepTime": {
+            "type": "float"
+          },
+          "DepTimeBlk": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "DepartureDelayGroups": {
+            "type": "float"
+          },
+          "Dest": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "DestGeoPoint": {
+            "type": "geo_point"
+          },
+          "DestAirportID": {
+            "type": "float"
+          },
+          "DestAirportSeqID": {
+            "type": "float"
+          },
+          "DestCityMarketID": {
+            "type": "float"
+          },
+          "DestCityName": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "DestState": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "DestStateFips": {
+            "type": "float"
+          },
+          "DestStateName": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "DestWac": {
+            "type": "float"
+          },
+          "Distance": {
+            "type": "float"
+          },
+          "DistanceGroup": {
+            "type": "float"
+          },
+          "Diverted": {
+            "type": "float"
+          },
+          "FirstDepTime": {
+            "type": "float"
+          },
+          "FlightDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis",
+            "locale": "en"
+          },
+          "FlightDateTime": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis",
+            "locale": "en"
+          },
+          "FlightNum": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Flights": {
+            "type": "float"
+          },
+          "LateAircraftDelay": {
+            "type": "float"
+          },
+          "Month": {
+            "type": "float"
+          },
+          "NASDelay": {
+            "type": "float"
+          },
+          "Origin": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "OriginGeoPoint": {
+            "type": "geo_point"
+          },
+          "OriginAirportID": {
+            "type": "float"
+          },
+          "OriginAirportSeqID": {
+            "type": "float"
+          },
+          "OriginCityMarketID": {
+            "type": "float"
+          },
+          "OriginCityName": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "OriginState": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "OriginStateFips": {
+            "type": "float"
+          },
+          "OriginStateName": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "OriginWac": {
+            "type": "float"
+          },
+          "Quarter": {
+            "type": "float"
+          },
+          "SecurityDelay": {
+            "type": "float"
+          },
+          "TailNum": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "TaxiIn": {
+            "type": "float"
+          },
+          "TaxiOut": {
+            "type": "float"
+          },
+          "UniqueCarrier": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "WeatherDelay": {
+            "type": "float"
+          },
+          "WheelsOff": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "WheelsOn": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Year": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "host": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "path": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "tags": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      }
+    }
+  }
+}

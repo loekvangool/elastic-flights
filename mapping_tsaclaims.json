@@ -1,0 +1,83 @@
+{
+  "settings" : {
+    "number_of_shards" : 1,
+    "number_of_replicas": 0,
+    "index.refresh_interval" : "10s"
+  },
+  "mappings": {
+    "tsaclaims": {
+      "_all": {
+        "enabled": false
+      },
+      "properties": {
+        "@timestamp": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "@version": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "Airline Name": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Airport Code": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Airport Name": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "AirportGeoPoint": {
+            "type": "geo_point"
+          },
+          "Claim Number": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Claim Site": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Claim Type": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "CloseAmount": {
+            "type": "float"
+          },
+          "Date Received": {
+            "type": "date",
+            "locale": "en"
+          },
+          "Disposition": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "Incident Date": {
+            "type": "date",
+            "locale": "en"
+          },
+          "Item Category": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "host": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "message": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "tags": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      }
+    }
+  }
+}
