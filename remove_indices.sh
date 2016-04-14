@@ -2,14 +2,13 @@
 
 ES_URL=${1}
 ES_AUTH=${2}
-ES_AUTH=
 
 if [[ -z ${ES_URL} ]]; then
     echo "Usage: ${0} URL:PORT [USERNAME:PASSWORD]"
     exit
 fi
 
-if [ -n ${ES_AUTH} ]; then
+if [ "${ES_AUTH}" ]; then
     AUTH_STRING="--user ${2}"
 fi
 
