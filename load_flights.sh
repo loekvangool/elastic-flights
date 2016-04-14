@@ -19,7 +19,7 @@ for file in data/*2014*.zip; do
 #	if [[ $REPLY =~ ^[Yy]$ ]]
 #	then
 #		iconv -c -f iso-8859-1 -t temp/*.csv > temp/output.csv
-		cat temp/*.csv | sed -e "1d" | logstash -f import_airlinedata.conf -w 2 --pluginpath .
+		cat temp/*.csv | sed -e "1d" | logstash -f import_airlinedata.conf --pluginpath .
 		mv -v ${file} data/done/
 #		rm -v temp/output.csv
 #	else

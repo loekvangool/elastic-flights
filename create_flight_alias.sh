@@ -13,9 +13,12 @@ if [ -n ${ES_AUTH} ]; then
     AUTH_STRING="--user ${2}"
 fi
 
-echo "Removing flights template"
-curl ${AUTH_STRING} -XDELETE ${ES_URL}/_template/flights
 echo 
-echo "Adding flights template"
-curl ${AUTH_STRING} -XPUT ${ES_URL}/_template/flights -d @mapping_flights.json
+echo "Adding/overwriting flights alias"
+curl ${AUTH_STRING} -XPOST ${ES_URL}/_aliases -d '
+{
+    "actions" : [
+        { "add" : { "index" : "flights-*", "alias" : "flights" } }
+    ]
+}'
 echo

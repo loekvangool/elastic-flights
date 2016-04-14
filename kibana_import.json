@@ -1,0 +1,640 @@
+[
+  {
+    "_id": "US-Domestic-Flight-Delays-w-slash-Weather",
+    "_type": "dashboard",
+    "_source": {
+      "title": "US Domestic Flight Delays w/ Weather",
+      "hits": 0,
+      "description": "US Domestic Flights",
+      "panelsJSON": "[{\"col\":1,\"id\":\"Map-Average-Delay-Per-Destination\",\"panelIndex\":1,\"row\":6,\"size_x\":12,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Bar-Average-Delay-Per-Carrier\",\"panelIndex\":2,\"row\":11,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"Stacked-Average-Delay-Per-Type\",\"panelIndex\":3,\"row\":3,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Line-Delay-Type-vs.-ArrivalTime\",\"panelIndex\":6,\"row\":3,\"size_x\":5,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Line-Average-Delay-Per-DepartureTime\",\"panelIndex\":7,\"row\":3,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"Donut-Carrier-Flight-Count\",\"panelIndex\":9,\"row\":11,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Table-Arrival-Delay-Percentiles-per-Carrier\",\"panelIndex\":10,\"row\":14,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Table-Largest-Arrival-Delays\",\"panelIndex\":11,\"row\":14,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Flights-Date-Histogram\",\"panelIndex\":13,\"row\":1,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Arrival-Delay-vs-Snow-Depth\",\"panelIndex\":15,\"row\":21,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Arrival-Delay-vs-WeatherDelay\",\"panelIndex\":17,\"row\":18,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Arrival-Delay-vs-Snow-Fall\",\"panelIndex\":18,\"row\":18,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"US-Domestic-Flights-Header\",\"panelIndex\":20,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ArrivalDelay-vs-Max-Terribility\",\"panelIndex\":21,\"row\":18,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Metric-Number-of-Flights\",\"panelIndex\":22,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Min-ampersand-Max-Temp-vs.-WeatherDelay\",\"panelIndex\":23,\"row\":21,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"Bar-Average-Compensated-Delay-Per-Carrier\",\"panelIndex\":24,\"row\":11,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Arrival-Delay-vs-Precipitation\",\"panelIndex\":25,\"row\":21,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-13\":{\"vis\":{\"legendOpen\":false}},\"P-15\":{\"vis\":{\"legendOpen\":false}},\"P-16\":{\"vis\":{\"legendOpen\":false}},\"P-17\":{\"vis\":{\"legendOpen\":false}},\"P-18\":{\"vis\":{\"legendOpen\":false}},\"P-2\":{\"vis\":{\"legendOpen\":false}},\"P-21\":{\"vis\":{\"legendOpen\":false}},\"P-23\":{\"vis\":{\"legendOpen\":false}},\"P-24\":{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#052B51\",\"Average CompensatedDelayMinutes\":\"#64B0C8\"},\"legendOpen\":false}},\"P-25\":{\"vis\":{\"legendOpen\":false}},\"P-6\":{\"vis\":{\"legendOpen\":true}},\"P-7\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "2014-12-30T23:00:00.000Z",
+      "timeFrom": "2013-12-31T23:00:00.000Z",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Claims",
+    "_type": "dashboard",
+    "_source": {
+      "title": "TSA Claims",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":5,\"id\":\"TSA-Claims-Date-Histogram\",\"panelIndex\":1,\"row\":1,\"size_x\":8,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"TSA-Claims-Disposition-Histogram\",\"panelIndex\":2,\"row\":5,\"size_x\":8,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"TSA-Claims-Value-by-Type\",\"panelIndex\":3,\"row\":7,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"TSA-Claims-by-Type\",\"panelIndex\":4,\"row\":7,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"TSA-Pie-Disposition\",\"panelIndex\":5,\"row\":4,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"TSA-Sum-of-Closed-Amounts\",\"panelIndex\":6,\"row\":7,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"Claims-Filed\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":4,\"size_y\":2,\"col\":5,\"row\":3},{\"id\":\"Average-Closed-Amount\",\"type\":\"visualization\",\"panelIndex\":8,\"size_x\":4,\"size_y\":2,\"col\":9,\"row\":3},{\"id\":\"TSA-Claims-Markdown\",\"type\":\"visualization\",\"panelIndex\":9,\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"legendOpen\":false}},\"P-6\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "Line-Delay-Type-vs.-ArrivalTime",
+    "_type": "visualization",
+    "_source": {
+      "title": "Line Delay Type vs. ArrivalTime",
+      "visState": "{\"title\":\"Line Delay Type vs. ArrivalTime\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":true,\"interpolate\":\"linear\",\"scale\":\"square root\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":\"5\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{\"max\":2400,\"min\":400}},\"aggs\":[{\"id\":\"3\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ArrTime\",\"interval\":100,\"extended_bounds\":{}}},{\"id\":\"4\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"5\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}},{\"id\":\"6\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"WeatherDelay\"}},{\"id\":\"7\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"SecurityDelay\"}},{\"id\":\"8\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"CarrierDelay\"}},{\"id\":\"9\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"NASDelay\"}},{\"id\":\"10\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"LateAircraftDelay\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"Average ArrDelayMinutes\": \"#E24D42\",\n      \"Average WeatherDelay\": \"#3F6833\",\n      \"Average SecurityDelay\": \"#629E51\",\n      \"Average CarrierDelay\": \"#7EB26D\",\n      \"Average NASDelay\": \"#B7DBAB\",\n      \"Average LateAircraftDelay\": \"#E0F9D7\"\n    }\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Weather-Patterns",
+    "_type": "visualization",
+    "_source": {
+      "title": "Weather Patterns",
+      "visState": "{\"title\":\"Weather Patterns\",\"type\":\"markdown\",\"params\":{\"markdown\":\"\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Header",
+    "_type": "visualization",
+    "_source": {
+      "title": "Header",
+      "visState": "{\"title\":\"Header\",\"type\":\"markdown\",\"params\":{\"markdown\":\"## US Domestic Flights\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "US-Domestic-Flights-Header",
+    "_type": "visualization",
+    "_source": {
+      "title": "US Domestic Flights Header",
+      "visState": "{\"title\":\"US Domestic Flights Header\",\"type\":\"markdown\",\"params\":{\"markdown\":\"## US Domestic Flights\\nThis dataset contains all domestic flight movements between the 5 largest airports in the US: ATL, LAX, ORD, DFW and JFK. It focuses on different types of arrival delay and includes weather data from a nearby weather station, which includes data on precipitation, snow, thunder, hail, ash and temperature.\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Line-Flight-Count-vs.-Average-Delay",
+    "_type": "visualization",
+    "_source": {
+      "title": "Line Flight Count vs. Average Delay",
+      "visState": "{\"title\":\"Line Flight Count vs. Average Delay\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":true,\"interpolate\":\"linear\",\"scale\":\"log\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":true,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"ArrTime\",\"interval\":100,\"extended_bounds\":{}}},{\"id\":\"4\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"Average ArrDelayMinutes\": \"#99440A\"\n    }\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Bar-Total-Amount-of-Flights",
+    "_type": "visualization",
+    "_source": {
+      "title": "Bar Total Amount of Flights",
+      "visState": "{\"title\":\"Bar Total Amount of Flights\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Donut-Carrier-Flight-Count",
+    "_type": "visualization",
+    "_source": {
+      "title": "Donut Carrier Flight Count",
+      "visState": "{\"title\":\"Donut Carrier Flight Count\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Stacked-Average-Delay-Per-Type",
+    "_type": "visualization",
+    "_source": {
+      "title": "Stacked Average Delay Per Type",
+      "visState": "{\"title\":\"Stacked Average Delay Per Type\",\"type\":\"area\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"interpolate\":\"linear\",\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"smoothLines\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"CarrierDelay\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"5\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"LateAircraftDelay\"}},{\"id\":\"8\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"NASDelay\"}},{\"id\":\"7\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"WeatherDelay\"}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"SecurityDelay\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"Average NASDelay\": \"#705DA0\"\n    }\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Stacked-Total-Flights",
+    "_type": "visualization",
+    "_source": {
+      "title": "Stacked Total Flights",
+      "visState": "{\"title\":\"Stacked Total Flights\",\"type\":\"area\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"smoothLines\":false,\"scale\":\"linear\",\"interpolate\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Stacked-Percentiles-CompensatedDelay",
+    "_type": "visualization",
+    "_source": {
+      "title": "Stacked Percentiles CompensatedDelay",
+      "visState": "{\"title\":\"Stacked Percentiles CompensatedDelay\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"3.50\"}},{\"id\":\"3\",\"type\":\"percentiles\",\"schema\":\"metric\",\"params\":{\"field\":\"CompensatedDelayMinutes\",\"percents\":[1,5,25,50,75,95,99]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Flights-Date-Histogram",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flights Date Histogram",
+      "visState": "{\"title\":\"Flights Date Histogram\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Arrival-Delay-vs-Snow-Depth",
+    "_type": "visualization",
+    "_source": {
+      "title": "Arrival Delay vs Snow Depth",
+      "visState": "{\"title\":\"Arrival Delay vs Snow Depth\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"radiusRatio\":\"1\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"5\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"snowdepth\"}},{\"id\":\"6\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#E24D42\",\"Average precipitation\":\"#CCA300\",\"Average temperature\":\"#BF1B00\",\"Average snowdepth\":\"#64B0C8\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Arrival-Delay-vs-Snow-Fall",
+    "_type": "visualization",
+    "_source": {
+      "title": "Arrival Delay vs Snow Fall",
+      "visState": "{\"title\":\"Arrival Delay vs Snow Fall\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"radiusRatio\":\"1\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"5\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"snowfall\"}},{\"id\":\"6\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#E24D42\",\"Average precipitation\":\"#CCA300\",\"Average temperature\":\"#BF1B00\",\"Average snowfall\":\"#0A50A1\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Arrival-Delay-vs-WeatherDelay",
+    "_type": "visualization",
+    "_source": {
+      "title": "Arrival Delay vs WeatherDelay",
+      "visState": "{\"title\":\"Arrival Delay vs WeatherDelay\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"radiusRatio\":\"1\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"5\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"WeatherDelay\"}},{\"id\":\"6\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#E24D42\",\"Average precipitation\":\"#CCA300\",\"Average temperature\":\"#E0F9D7\",\"Average WeatherDelay\":\"#EAB839\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Map-Average-Delay-Per-Destination",
+    "_type": "visualization",
+    "_source": {
+      "title": "Map Average Delay Per Destination",
+      "visState": "{\"title\":\"Map Average Delay Per Destination\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":16,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"DestGeoPoint\",\"autoPrecision\":true,\"mapZoom\":4,\"mapCenter\":[38.856820134743636,-91.14257812499999],\"precision\":3}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Stacked-Percentiles-DeltaDelay",
+    "_type": "visualization",
+    "_source": {
+      "title": "Stacked Percentiles DeltaDelay",
+      "visState": "{\"title\":\"Stacked Percentiles DeltaDelay\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"3.50\"}},{\"id\":\"3\",\"type\":\"percentiles\",\"schema\":\"metric\",\"params\":{\"field\":\"DeltaDelayMinutes\",\"percents\":[1,5,25,50,75,95,99]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Map-Average-Terribility",
+    "_type": "visualization",
+    "_source": {
+      "title": "Map Average Terribility",
+      "visState": "{\"title\":\"Map Average Terribility\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":16,\"heatMinOpacity\":\"0.62\",\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"terribility\"}},{\"id\":\"2\",\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"DestGeoPoint\",\"autoPrecision\":true,\"mapZoom\":4,\"mapCenter\":[36.77409249464195,-91.669921875],\"precision\":3}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Bar-Average-CompensatedDelay-vs-ArrivalDelay",
+    "_type": "visualization",
+    "_source": {
+      "title": "Bar Average CompensatedDelay vs ArrivalDelay",
+      "visState": "{\"title\":\"Bar Average CompensatedDelay vs ArrivalDelay\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"3\"}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"CompensatedDelayMinutes\"}},{\"id\":\"4\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Min-ampersand-Max-Temp-vs.-WeatherDelay",
+    "_type": "visualization",
+    "_source": {
+      "title": "Min & Max Temp vs. WeatherDelay",
+      "visState": "{\"title\":\"Min & Max Temp vs. WeatherDelay\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":true,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":\"1\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"tmin\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"WeatherDelay\"}},{\"id\":\"4\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}},{\"id\":\"5\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"tmax\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average WeatherDelay\":\"#CCA300\",\"Average tmin\":\"#6ED0E0\",\"Average tmax\":\"#E24D42\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Bar-Average-CompensatedDelay",
+    "_type": "visualization",
+    "_source": {
+      "title": "Bar Average CompensatedDelay",
+      "visState": "{\"title\":\"Bar Average CompensatedDelay\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"3\"}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"CompensatedDelayMinutes\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Metric-Delayed",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric Delayed",
+      "visState": "{\"title\":\"Metric Delayed\",\"type\":\"metric\",\"params\":{\"fontSize\":\"40\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"ArrDelayMinutes:>0 AND ArrDelayMinutes:<16\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Metric-Seriously-Delayed-(>15-min)",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric Seriously Delayed (>15 min)",
+      "visState": "{\"title\":\"Metric Seriously Delayed (>15 min)\",\"type\":\"metric\",\"params\":{\"fontSize\":\"40\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"ArrDelayMinutes:>15\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Metric-Cancelled-Flights",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric Cancelled Flights",
+      "visState": "{\"title\":\"Metric Cancelled Flights\",\"type\":\"metric\",\"params\":{\"fontSize\":\"40\"},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"Cancelled\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "ArrivalDelay-vs-Max-Terribility",
+    "_type": "visualization",
+    "_source": {
+      "title": "ArrivalDelay vs Max Terribility",
+      "visState": "{\"title\":\"ArrivalDelay vs Max Terribility\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"radiusRatio\":\"3\",\"scale\":\"square root\",\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"5\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"terribility\"}},{\"id\":\"6\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}},{\"id\":\"7\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"terribility\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#E24D42\",\"Average precipitation\":\"#CCA300\",\"Average temperature\":\"#E0F9D7\",\"Average WeatherDelay\":\"#EAB839\",\"Max terribility\":\"#EAB839\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Metric-On-Time",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric On Time",
+      "visState": "{\"title\":\"Metric On Time\",\"type\":\"metric\",\"params\":{\"fontSize\":\"40\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"ArrDelayMinutes:<1\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Metric-flights",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric All Flights",
+      "visState": "{\"title\":\"Metric All Flights\",\"type\":\"metric\",\"params\":{\"fontSize\":\"40\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Arrival-Delay-vs-Precipitation",
+    "_type": "visualization",
+    "_source": {
+      "title": "Arrival Delay vs Precipitation",
+      "visState": "{\"title\":\"Arrival Delay vs Precipitation\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"radiusRatio\":\"1\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"FlightDateTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"5\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"precipitation\"}},{\"id\":\"6\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#E24D42\",\"Average precipitation\":\"#CCA300\",\"Average temperature\":\"#BF1B00\",\"Average snowfall\":\"#0A50A1\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Line-Average-Delay-Per-DepartureTime",
+    "_type": "visualization",
+    "_source": {
+      "title": "Line Average Delay Per DepartureTime",
+      "visState": "{\"title\":\"Line Average Delay Per DepartureTime\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":true,\"interpolate\":\"linear\",\"scale\":\"square root\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":\"7\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":true,\"setYExtents\":true,\"yAxis\":{\"max\":280,\"min\":0}},\"aggs\":[{\"id\":\"3\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"DepTime\",\"interval\":100,\"extended_bounds\":{}}},{\"id\":\"4\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"5\",\"type\":\"count\",\"schema\":\"radius\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#99440A\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Bar-Average-Compensated-Delay-Per-Carrier",
+    "_type": "visualization",
+    "_source": {
+      "title": "Bar Average Compensated Delay Per Carrier",
+      "visState": "{\"title\":\"Bar Average Compensated Delay Per Carrier\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"CompensatedDelayMinutes\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#052B51\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Bar-Average-Delay-Per-Carrier",
+    "_type": "visualization",
+    "_source": {
+      "title": "Bar Average Delay Per Carrier",
+      "visState": "{\"title\":\"Bar Average Delay Per Carrier\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"asc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Average ArrDelayMinutes\":\"#052B51\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Table-Arrival-Delay-Percentiles-per-Carrier",
+    "_type": "visualization",
+    "_source": {
+      "title": "Table Arrival Delay Percentiles per Carrier",
+      "visState": "{\"title\":\"Table Arrival Delay Percentiles per Carrier\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"3\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"4\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"UniqueCarrier\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"4\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Table-Largest-Arrival-Delays",
+    "_type": "visualization",
+    "_source": {
+      "title": "Table Largest Arrival Delays",
+      "visState": "{\"title\":\"Table Largest Arrival Delays\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"ArrDelayMinutes\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"FlightDateTime\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Metric-Number-of-Flights",
+    "_type": "visualization",
+    "_source": {
+      "title": "Metric Number of Flights",
+      "visState": "{\"title\":\"Metric Number of Flights\",\"type\":\"metric\",\"params\":{\"fontSize\":\"44\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"flights\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Claims-by-Type",
+    "_type": "visualization",
+    "_source": {
+      "title": "TSA Claims by Type",
+      "visState": "{\"title\":\"TSA Claims by Type\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Claim Type\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Claims-Filed",
+    "_type": "visualization",
+    "_source": {
+      "title": "Claims Filed",
+      "visState": "{\"title\":\"Claims Filed\",\"type\":\"metric\",\"params\":{\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Sum-of-Closed-Amounts",
+    "_type": "visualization",
+    "_source": {
+      "title": "TSA Sum of Closed Amounts",
+      "visState": "{\"title\":\"TSA Sum of Closed Amounts\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"CloseAmount\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"Date Received\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Claims-Date-Histogram",
+    "_type": "visualization",
+    "_source": {
+      "title": "TSA Claims Date Histogram",
+      "visState": "{\"title\":\"TSA Claims Date Histogram\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"Date Received\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Claims-Value-by-Type",
+    "_type": "visualization",
+    "_source": {
+      "title": "TSA Claims Value by Type",
+      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{\"field\":\"CloseAmount\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"id\":\"2\",\"params\":{\"field\":\"Claim Type\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":10},\"schema\":\"segment\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTooltip\":true,\"isDonut\":false,\"shareYAxis\":true},\"title\":\"TSA Claims Value by Type\",\"type\":\"pie\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Average-Closed-Amount",
+    "_type": "visualization",
+    "_source": {
+      "title": "Average Closed Amount",
+      "visState": "{\"title\":\"Average Closed Amount\",\"type\":\"metric\",\"params\":{\"fontSize\":60},\"aggs\":[{\"id\":\"2\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"CloseAmount\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Total-Closed-Amount",
+    "_type": "visualization",
+    "_source": {
+      "title": "Total Closed Amount",
+      "visState": "{\"title\":\"Total Closed Amount\",\"type\":\"metric\",\"params\":{\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"CloseAmount\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Claims-Disposition-Histogram",
+    "_type": "visualization",
+    "_source": {
+      "title": "TSA Claims Disposition Histogram",
+      "visState": "{\"title\":\"TSA Claims Disposition Histogram\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Disposition\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"Date Received\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Deny\":\"#BF1B00\",\"Settle\":\"#E5AC0E\",\"Approve in Full\":\"#508642\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Pie-Disposition",
+    "_type": "visualization",
+    "_source": {
+      "title": "TSA Pie Disposition",
+      "visState": "{\"title\":\"TSA Pie Disposition\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Disposition\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Deny\":\"#BF1B00\",\"Approve in Full\":\"#3F6833\",\"Settle\":\"#E5AC0E\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"tsaclaims\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "TSA-Claims-Markdown",
+    "_type": "visualization",
+    "_source": {
+      "title": "TSA Claims Markdown",
+      "visState": "{\"title\":\"New Visualization\",\"type\":\"markdown\",\"params\":{\"markdown\":\"# TSA Claims\\nA dashboard visualizing [TSA claims data](https://www.dhs.gov/tsa-claims-data \\\"Department of Homeland Security\\\") spanning 2014.\\n* Claims take months to turnaround, because the number of claims closed in the same calendar year goes down drastically from Q3 onwards.\\n* Almost all claims are around damage of property and are denied\\n* Almost 9000 claims are made in a year with [848 million passengers](http://www.rita.dot.gov/bts/press_releases/bts015_15 \\\"Bureau of Transportation Statistics\\\")\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]

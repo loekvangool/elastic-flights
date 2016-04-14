@@ -25,7 +25,8 @@ while [ $START -lt ${END} ]; do
 done
 
 # TSA CLAIMS DATA
-wget -P data/tsa_claims https://www.dhs.gov/sites/default/files/publications/claims-2014.xls
+# We use a cleaned version of this data
+#wget -P data/tsa_claims https://www.dhs.gov/sites/default/files/publications/claims-2014.xls
 #wget -P data/tsa_claims https://www.dhs.gov/sites/default/files/publications/claims-2010-2013_0.xls
 #wget -P data/tsa_claims https://www.dhs.gov/sites/default/files/publications/claims-2007-2009_0.xls
 #wget -P data/tsa_claims https://www.dhs.gov/sites/default/files/publications/claims-2002-2006_0.xls
