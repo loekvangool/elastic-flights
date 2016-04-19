@@ -16,12 +16,13 @@ Complete these steps:
 4. Create the alias, composed of all `flights-*` indices:
     * `sh create_flight_alias.sh`
 5. Import Kibana visuals and dashboards:
-    * In Kibana, go to `Settings`, then `Objects`, then Import `kibana_import.json`
-    * Timelion is a time series graphing plugin for Kibana, developed by the people of Elastic. Read more about Timelion here. Currently it is not possible to export or import Timelion sheets. To create some charts about this data, open Timelion and add the following code. For every line, add a Chart on the Timelion sheet and paste in the code for four different charts:
-     `.es(index=all-flights).label("All Flights"), .es(index=all-flights, q=ArrDelayMinutes:>0).label("Delayed Flights")`
-     `.static(55).color(red).label("Red Line"), .static(50).color(orange).label("Orange Line"), .es(index=all-flights, q=ArrDelayMinutes:>0).label("Delayed Flights Percentage").divide(.es(index=all-flights)).multiply(100).color(navy).movingaverage(5)`
-     `.es(index=all-flights, metric=avg:tmax).color(orange).lines(width=2).movingaverage(5).label("Minimum Temperature (celsius) mavg=5"), .es(index=all-flights, metric=avg:tmin).color(lightblue).lines(width=2).movingaverage(5).label("Maximum Temperature (celsius) mavg=5"), .es(index=all-flights, metric=avg:WeatherDelay).color(Red).movingaverage(5).label("Weather Delay (in minutes) mavg=5")`
-     `.es(index=all-flights, q=ArrDelayMinutes:>0).label("Delayed Flights Percentage").color(navy).movingaverage(10), .es(index=all-flights, metric=sum:terribility).label("Terribility Index").movingaverage(10)`
+   * In Kibana, go to `Settings`, then `Objects`, then Import `kibana_import.json`
+   * Timelion is a time series graphing plugin for Kibana, developed by the people of Elastic. Read more about Timelion here. Currently it is not possible to export or import Timelion sheets. To create some charts about this data, open Timelion and add the following code. For every line, add a Chart on the Timelion sheet and paste in the code for four different charts:
+   `.es(index=all-flights).label("All Flights"), .es(index=all-flights, q=ArrDelayMinutes:>0).label("Delayed Flights")`
+   `.static(55).color(red).label("Red Line"), .static(50).color(orange).label("Orange Line"), .es(index=all-flights, q=ArrDelayMinutes:>0).label("Delayed Flights Percentage").divide(.es(index=all-flights)).multiply(100).color(navy).movingaverage(5)`
+   `.es(index=all-flights, metric=avg:tmax).color(orange).lines(width=2).movingaverage(5).label("Minimum Temperature (celsius) mavg=5"), .es(index=all-flights, metric=avg:tmin).color(lightblue).lines(width=2).movingaverage(5).label("Maximum Temperature (celsius) mavg=5"), .es(index=all-flights, metric=avg:WeatherDelay).color(Red).movingaverage(5).label("Weather Delay (in minutes) mavg=5")`
+   `.es(index=all-flights, q=ArrDelayMinutes:>0).label("Delayed Flights Percentage").color(navy).movingaverage(10), .es(index=all-flights, metric=sum:terribility).label("Terribility Index").movingaverage(10)`
+
 ## Prerequisites
 1. Elasticsearch 2.3
 2. Kibana 4.4
