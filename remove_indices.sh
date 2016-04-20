@@ -14,5 +14,5 @@ fi
 
 curl ${AUTH_STRING} -XDELETE ${ES_URL}/flights-*
 curl ${AUTH_STRING} -XDELETE ${ES_URL}/_template/flights
-curl ${AUTH_STRING} -XDELETE ${ES_URL}/_indices/all-flights
+curl ${AUTH_STRING} -XDELETE ${ES_URL}/_indices/flights
 echo
