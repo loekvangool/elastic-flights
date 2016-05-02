@@ -6,16 +6,20 @@ As added bonus, there is a separate data set with 2014 TSA claims data.
 Complete these steps:
 
 1. Download data:
-    * `sh wget.sh`
-    * Data size is about 2.5 GB. Because of filtering, size in Elasticsearch will be much lower, below 100 MB.
+   * `sh wget.sh`
+   * Data size is about 2.5 GB. Because of filtering, size in Elasticsearch will be much lower, below 100 MB.
 2. Create Elasticsearch indices and templates:
-    * Optionally put a username/password in `import_*.conf`
-    * `sh create_flight_template.sh && sh create_tsaclaims_index.sh`
+   * `sh create_flight_template.sh URI [USERNAME:PASSWORD]`
+   * `sh create_tsaclaims_index.sh URI [USERNAME:PASSWORD]`
 3. Ingest flight data into Elasticsearch with Logstash:
-    * `sh load_tsaclaims.sh && sh load_flights.sh`
+   * Optionally put a username/password/host in `import_*.conf`
+   * `sh load_tsaclaims.sh && sh load_flights.sh`
 4. Create an alias called `flights`, composed of all `flights-*` indices:
     * `sh create_flight_alias.sh`
-5. Import Kibana visuals and dashboards:
+5. Create the index patterns in Kibana:
+   * `tsaclaims` with `Date Received` as time field
+   * `flights` with `FlightDateTime` as time field
+6. Import Kibana visuals and dashboards:
    * In Kibana, go to `Settings`, then `Objects`, then Import `kibana_import.json`
    * Optional: Timelion is a time series graphing plugin for Kibana, developed by the people of Elastic. Read more about Timelion and how to get it [here](https://www.elastic.co/blog/timelion-timeline). Currently it is not possible to export or import Timelion sheets. To create some charts about this data, open Timelion and add the following. For every line, add a Chart on the Timelion sheet and paste in the code for six different charts. Don't forget to save the sheet.
    
