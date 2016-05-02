@@ -17,7 +17,7 @@ Complete these steps:
     * `sh create_flight_alias.sh`
 5. Import Kibana visuals and dashboards:
    * In Kibana, go to `Settings`, then `Objects`, then Import `kibana_import.json`
-   * Optional: Timelion is a time series graphing plugin for Kibana, developed by the people of Elastic. Read more about Timelion and how to get it [here](https://www.elastic.co/blog/timelion-timeline). Currently it is not possible to export or import Timelion sheets. To create some charts about this data, open Timelion and add the following code. For every line, add a Chart on the Timelion sheet and paste in the code for four different charts. Don't forget to save the sheet.
+   * Optional: Timelion is a time series graphing plugin for Kibana, developed by the people of Elastic. Read more about Timelion and how to get it [here](https://www.elastic.co/blog/timelion-timeline). Currently it is not possible to export or import Timelion sheets. To create some charts about this data, open Timelion and add the following. For every line, add a Chart on the Timelion sheet and paste in the code for six different charts. Don't forget to save the sheet.
    
    `.es(index=flights).label("All Flights"), .es(index=flights, q=ArrDelayMinutes:>0).label("Delayed Flights")`
 
@@ -27,16 +27,20 @@ Complete these steps:
    
    `.es(index=flights, q=ArrDelayMinutes:>0).label("Delayed Flights Percentage").color(navy).movingaverage(10), .es(index=flights, metric=sum:terribility).label("Terribility Index").movingaverage(10)`
 
+   `.es(index=tsaclaims, timefield="Date Received").movingaverage(7).label("TSA Claims mavg(7)"), .es(index=flights).movingaverage(7).divide(10).label("Flights mavg(7) /10")`
+
+   `.es(index=flights, metric=avg:snowfall).divide(10).add(index=flights, metric=avg:thunder).sum(.es(index=flights, metric=avg:hail).multiply(3)).sum(.es(index=flights, metric=avg:glaze).multiply(2)).sum(.es(index=flights, metric=avg:fog).multiply(1)).sum(.es(index=flights, metric=avg:heavy_fog).multiply(5)).sum(.es(index=flights, metric=avg:dust_ash).multiply(10)).label("Average Terribility(R)").points(4).color(Navy), .es(index=flights, metric=avg:terribility).label("Ingested Terribility(R)")`
+
 ## Prerequisites
 1. Elasticsearch 2.3
 2. Kibana 4.4
 3. Logstash 2.3
-4. Timelion (optional)
+4. Timelion 4.4 (optional)
 
 Other versions may work but are untested. If it turns out it works, please consider letting us know by making a pull request on this README.
 
 ## What's included
-1. `create_*.sh`: sets up Elasticsearch templates, mappings (actual mappings in mapping*.json) and aliases
+1. `create_*.sh`: sets up Elasticsearch templates, mappings (actual mappings in `mapping*.json`) and aliases
 2. `lookup_data/*`: airport timezone and weather data for enriching the flight data
 3. `logstash/filters/*.rb`: four simple Logstash filters to join the lookup data
 3. `load_*.sh`: invoke Logstash to import the flat data files
