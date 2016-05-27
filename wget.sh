@@ -1,12 +1,12 @@
-!#/bin/bash
+#!/bin/bash
 
-START=2014; # First year of data
-END=2014; # Last year of data
+START=2014 # First year of data
+END=2014 # Last year of data
 
 mkdir -p data/tsa_claims
 mkdir -p data/weather
 
-END=${END} + 1
+END=`expr ${END} + 1`
 
 while [ $START -lt ${END} ]; do
 	wget -P data http://tsdata.bts.gov/PREZIP/On_Time_On_Time_Performance_${START}_1.zip
