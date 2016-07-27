@@ -33,7 +33,7 @@ Complete these steps:
 
    `.es(index=tsaclaims, timefield="Date Received").movingaverage(7).label("TSA Claims mavg(7)"), .es(index=flights).movingaverage(7).divide(10).label("Flights mavg(7) /10")`
 
-   `.es(index=flights, metric=avg:snowfall).divide(10).add(index=flights, metric=avg:thunder).sum(.es(index=flights, metric=avg:hail).multiply(3)).sum(.es(index=flights, metric=avg:glaze).multiply(2)).sum(.es(index=flights, metric=avg:fog).multiply(1)).sum(.es(index=flights, metric=avg:heavy_fog).multiply(5)).sum(.es(index=flights, metric=avg:dust_ash).multiply(10)).label("Average Terribility(R)").points(4).color(Navy), .es(index=flights, metric=avg:terribility).label("Ingested Terribility(R)")`
+   `.es(index=flights, metric=avg:snowfall).divide(10).add(.es(index=flights, metric=avg:thunder)).sum(.es(index=flights, metric=avg:hail).multiply(3)).sum(.es(index=flights, metric=avg:glaze).multiply(2)).sum(.es(index=flights, metric=avg:fog).multiply(1)).sum(.es(index=flights, metric=avg:heavy_fog).multiply(5)).sum(.es(index=flights, metric=avg:dust_ash).multiply(10)).label("Average Terribility(R)").points(4).color(Navy), .es(index=flights, metric=avg:terribility).label("Ingested Terribility(R)")`
 
 ## Prerequisites
 1. Elasticsearch 2.3
