@@ -1,3 +1,5 @@
+### TL;DR: This is an archive. Will it work on Elastic 9 as-is? Probably not. Is it completely outdated and worthless? No it probably needs a few tweaks to be made compatible with Elastic >= 9.x, and the Stack can do much more with the data once it's chillin' in its Elasticsearch index. But worthless? It definitely is worthless to you if you're working for the NTSB or an airline. If you're just looking to get to know Elastic and are tired of staring at *syslog* sample data, it might just be what you need. It _is_ a decent amount of real-life data residing in a Stack that , which means lots of untold stories can be discovered in it.
+
 # Elastic Stack demo for airline data
 US Domestic Flights ETL flow with weather, geo, delays, airlines for the country's top 5 airports. Uses Logstash, Elasticsearch &amp; Kibana (with optionally the Kibana plugin Timelion).
 
